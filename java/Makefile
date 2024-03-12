@@ -27,7 +27,7 @@ classes/%.class : src/%.java
 # ------ running ------
 .PHONY : run
 run :
-	$(RUNNER) -cp $(CLASSES_DIR) $(MAIN)
+	@$(RUNNER) -cp $(CLASSES_DIR) $(MAIN)
 
 # ------ Workspace initialisation ------
 .PHONY : init
