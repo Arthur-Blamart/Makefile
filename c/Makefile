@@ -27,7 +27,7 @@ OBJ_LIST = ${SRC_LIST:src/%.c=$(BUILD_DIR)/%.o}
 all : $(BIN_DIR)/$(TARGET)
 
 # ========= Target Rule =========
-$(BIN_DIR)/$(TARGET) : ./build/hello.o ./build/main.o
+$(BIN_DIR)/$(TARGET) : $(OBJ_LIST)
 	@echo "========= Link time ========="
 	@$(CC) $(OBJ_LIST) -o $(BIN_DIR)/$(TARGET)
 	@echo "========= Link time Finished ========="
